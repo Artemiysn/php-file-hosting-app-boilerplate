@@ -1,0 +1,51 @@
+.files-list {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid $lightgrey;
+}
+
+.file {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border-bottom: 1px solid $lightgrey;
+    padding: 10px;
+    &__preview-img {
+        display: block;
+        height: 3em;
+        width: 3em;
+        padding-top: 5px;
+    }
+    &__info {
+        @include clearfix;
+        padding: 5px 5px 5px 10px;
+        flex-grow: 1;
+        &-name {
+            float: left;
+            width: 100%;
+            padding-bottom: 5px;
+            line-height: 1em;
+        }
+        &-size {
+            float: left;
+            max-width: 30%;
+        }
+        &-downloads {
+            float: right;
+            max-width: 70%;
+        }
+    }
+}
+
+// laravel pagination classes
+
+ul.pagination {
+    list-style: none;
+    text-align: center;
+}
+
+li.page-item {
+    display: inline-block;
+    padding: 0 3px;
+}
+

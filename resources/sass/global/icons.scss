@@ -1,0 +1,24 @@
+[class*="icon-"] {
+    background-position: center;
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 10px;
+    min-width: 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon-search {
+    background-image: url("../../zondicons/search.svg");
+}
+
+.icon-share-white {
+    background-color: $white;
+    mask-image: url("../../zondicons/share.svg");
+}
+
+.icon-upload-file {
+    background-color: $grey;
+    mask-image: url("../../zondicons/upload.svg");
+}

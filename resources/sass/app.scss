@@ -1,0 +1,30 @@
+//
+//// Fonts
+//@import url('https://fonts.googleapis.com/css?family=Nunito');
+//
+//// Variables
+//@import 'variables';
+//
+//// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+//
+//.navbar-laravel {
+//  background-color: #fff;
+//  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+//}
+
+//<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,400i|IBM+Plex+Sans+Condensed:400,400i|IBM+Plex+Sans:100,100i,400,400i,700,700i|IBM+Plex+Serif:400,400i" rel="stylesheet">
+
+@import 'global/fonts';
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/global';
+@import 'global/icons';
+@import 'global/input&buttons';
+@import 'global/header';
+@import 'global/footer';
+
+@import 'pages/index';
+@import 'pages/detail';
+@import 'pages/catalog';
+

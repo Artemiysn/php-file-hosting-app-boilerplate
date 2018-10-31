@@ -1,0 +1,51 @@
+.header {
+    //@include clearfix;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $blue;
+    padding: 10px 20px;
+    height: 80px;
+    box-sizing: border-box;
+    &__logo {
+        text-decoration: none;
+        color: inherit;
+        &:hover {
+            color: inherit;
+        }
+        &-text {
+            font-size: 1.5em;
+            color: $white;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &-icon {
+            height: 1.5em;
+            width: 1.5em;
+        }
+    }
+
+    &__search {
+        &-input {
+
+        }
+        &-btn {
+
+        }
+        &-icon {
+
+        }
+    }
+}
+
+.search-error-message {
+    padding: 10px 20px;
+    background-color: $dark-blue;
+    display: none;
+    &.visible {
+        display: block;
+    }
+    &__text {
+        color: lightcoral;
+    }
+}

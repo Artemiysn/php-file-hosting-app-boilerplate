@@ -1,0 +1,17 @@
+.error-message {
+    margin: 10px 0;
+    padding: 2px 5px;
+    background-color: lightcoral;
+    border: 1px solid red;
+    display: none;
+    &.visible {
+        display: block;
+    }
+}
+
+.error-block {
+    margin: 10px 0;
+    padding: 2px 5px;
+    background-color: lightcoral;
+    border: 1px solid red;
+}
