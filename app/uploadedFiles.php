@@ -26,7 +26,7 @@ class uploadedFiles extends Model
     public function normaliseName($uploadedFile, $id)
     {
         // replace ALL special symbols in file name including dots and underscores with spaces
-        $normalisedName = preg_replace('/[-_,!=<>@#`%&;:"\[\\\^\$\.\|\?\*\+\(\)\{\}\]]/', ' ', $uploadedFile);
+        $normalisedName = preg_replace('/[-_,!=<>@#`%&;:\'\"\[\\\\^\$\.\|\?\*\+\(\)\{\}\]]/', ' ', $uploadedFile);
         // we add user name for uploaded file in the special column in our table with tsvector format for better search
         $sql = \DB::raw('UPDATE "uploadedFiles" SET searchtext = setweight(to_tsvector(coalesce(:normalisedName, \'\' )), \'A\') WHERE  "uploadedFiles".id = :id');
 
