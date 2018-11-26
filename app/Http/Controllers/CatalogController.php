@@ -27,9 +27,8 @@ class CatalogController extends Controller
     {
         $pages = \Config::get('_filehost.pagination');
         $getSearchRequest = $request->input('search-input');
-        // replace everything except letters to spaces. Note! regex like [^a-z]
-        // is not precise with languages other the english
-        $normalisedInput = preg_replace('/[-_,!=<>@#`%&;:"\[\\\^\$\.\|\?\*\+\(\)\{\}\]]/', ' ', $getSearchRequest);
+        // replace everything except letters to spaces.
+        $normalisedInput = preg_replace('/[-_,!=<>@#`%&;:\'\"\[\\\\^\$\.\|\?\*\+\(\)\{\}\]]/', ' ', $getSearchRequest);
         $files = $this->_uploadedFilesModel->search($pages, $normalisedInput);
         if ($files->total() == 0) {
             $request->session()->flash('status', 'Nothing was found!');
